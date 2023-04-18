@@ -1,0 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(void)
+{
+	int age = 0;
+	char kind[10] = { 0, };
+	printf("나이를 입력하시오:");
+	scanf("%d", &age);
+	printf("당신은 %s입니다.", (age >= 20) ? "성인" : "미성년자");
+	return 0;
+}
