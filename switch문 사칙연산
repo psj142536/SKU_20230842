@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(void)
+{
+	int a,c;
+	char b;
+	printf("수식을 입력하시오(예: 2 + 5) >> ");
+	scanf("%d %c %d", &a, &b, &c);
+	switch (b)
+	{
+	case '*':
+		printf("%d %c %d = %d", a, b, c, a * c);
+		break;
+	case '-':
+		printf("%d %c %d = %d", a, b, c, a - c);
+		break;
+	case '/':
+		printf("%d %c %d = %d", a, b, c, a / c);
+		break;
+	case'+':
+		printf("%d %c %d = %d", a, b, c, a + c);
+		break;
+	default:
+		printf("정해진 수식이 아닙니다.\n");
+		break;
+	}
+	return 0;
+}
