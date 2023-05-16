@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	int a = 0;
+	
+	do {
+		printf("1---새로만들기\n2-- - 파일열기\n3-- - 파일닫기\n");
+		printf("하나를 선택하시오:");
+		scanf("%d", &a);
+	} while (a < 1 || a>3);
+	printf("선택된 메뉴 = 1\n");
+	switch (a)
+	{
+	case 1:
+		printf("새로만들기를 선택하셨습니다.");
+		break;
+
+	case 2:
+		printf("파일열기를 선택하셨습니다.");
+		break;
+	case 3:
+		printf("파일닫기를 선택하셨습니다");
+		break;
+	}
+	return 0;
+}
