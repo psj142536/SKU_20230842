@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	srand(time(NULL));
+	int first_money = 0, purpose_money = 0, success = 0, sum = 0, ptime = 1;
+	printf("초기 금액");
+	scanf("%d", &first_money);
+	printf("목표 금액");
+	scanf("%d", &purpose_money);
+	sum = first_money;
+	while (1)
+	{
+		int x = rand() % 2;
+		if (x == 1)
+		{
+			sum++;
+			success++;
+		}
+		else if (x == 0)
+			sum--;
+		ptime++;
+		if (ptime == 100 || sum == purpose_money || sum == 0)
+			break;
+	}
+	printf("100번중 %d번 성공", success);
+}
