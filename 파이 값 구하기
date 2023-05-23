@@ -1,0 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(void)
+{
+	double a = 1.0, b = 4.0, pie = 0;
+	int n = 0;
+	printf("반복횟수:");
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++)
+	{
+		pie += b / a;
+		a += 2;
+		b *= -1;
+	}
+	printf("Pi = %.6f", pie);
+	return 0;
+}
