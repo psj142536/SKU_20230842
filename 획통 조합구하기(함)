@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int fact(int n)
+{
+	int sum = 1;
+	for (int i = n; i > 0; i--)
+		sum *= i;
+	return sum;
+}
+
+int C(int n,int r)
+{
+	int sum = fact(n) / (fact(n - r) * fact(r));
+	return sum;
+}
+
+int main()
+{
+	int a, b, sum;
+	printf("정수를 입력하시오: ");
+	scanf("%d", &a);
+	printf("정수를 입력하시오: ");
+	scanf("%d", &b);
+	sum = C(a, b);
+	printf("C(%d, %d) = %d", a, b, sum);
+	return 0;
+}
