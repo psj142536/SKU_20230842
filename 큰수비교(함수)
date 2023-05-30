@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int MAX(int x, int y)
+{
+	if (x >= y)
+		return x;
+	else if (x < y)
+		return y;
+}
+
+int main()
+{
+	int a, b, amount;
+	printf("정수 2개를 입력하시오: ");
+	scanf("%d %d", &a, &b);
+	amount = MAX(a, b);
+	printf("더 큰 값은 %d입니다.", amount);
+	return 0;
+}
